@@ -265,9 +265,109 @@
 
         <!-- ── Sección: Usuarios ──────────────────── -->
         <section id="sec-usuarios" class="hidden space-y-6">
-          <div class="rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 text-center text-gray-400 dark:text-gray-500">
-            Gestión de Usuarios — Etapa 4
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+            <table class="w-full text-sm text-left">
+              <thead class="bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
+                <tr>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Nombre</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Email</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Plan</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Estado</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs text-right">Acciones</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+
+                <!-- Fila 1 -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">María García</td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">maria@acmecorp.com</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Enterprise</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-user-1">⋮</button>
+                      <div id="dd-user-1" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-1">Ver detalle</button>
+                        <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Fila 2 -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">James Wilson</td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">james@byteworks.io</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Pro</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-user-2">⋮</button>
+                      <div id="dd-user-2" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-2">Ver detalle</button>
+                        <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Fila 3 -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Laura Chen</td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">laura@dataflow.com</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Pro</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400">Inactivo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-user-3">⋮</button>
+                      <div id="dd-user-3" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-3">Ver detalle</button>
+                        <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Fila 4 -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Carlos Méndez</td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">carlos@startup.dev</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Free</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-user-4">⋮</button>
+                      <div id="dd-user-4" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-4">Ver detalle</button>
+                        <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Fila 5 -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Sarah Johnson</td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">sarah@techlab.co</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Enterprise</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300">Suspendido</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-user-5">⋮</button>
+                      <div id="dd-user-5" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-5">Ver detalle</button>
+                        <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
           </div>
+
         </section>
 
         <!-- ── Sección: Agentes ───────────────────── -->
@@ -302,6 +402,100 @@
     </div><!-- /columna derecha -->
 
   </div><!-- /flex wrapper -->
+
+  <!-- ═══════════════════════════════════════════
+       MODALES DE USUARIOS
+  ════════════════════════════════════════════ -->
+
+  <!-- Modal Usuario 1: María García -->
+  <div id="modal-user-1" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-user-1"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">María García</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-1">✕</button>
+      </div>
+      <dl class="space-y-3 text-sm">
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Email</dt><dd class="text-gray-900 dark:text-white font-medium">maria@acmecorp.com</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Plan</dt><dd class="text-gray-900 dark:text-white font-medium">Enterprise</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Estado</dt><dd><span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span></dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Empresa</dt><dd class="text-gray-900 dark:text-white font-medium">Acme Corp</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Registro</dt><dd class="text-gray-900 dark:text-white font-medium">2025-01-10</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Modal Usuario 2: James Wilson -->
+  <div id="modal-user-2" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-user-2"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">James Wilson</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-2">✕</button>
+      </div>
+      <dl class="space-y-3 text-sm">
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Email</dt><dd class="text-gray-900 dark:text-white font-medium">james@byteworks.io</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Plan</dt><dd class="text-gray-900 dark:text-white font-medium">Pro</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Estado</dt><dd><span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span></dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Empresa</dt><dd class="text-gray-900 dark:text-white font-medium">ByteWorks</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Registro</dt><dd class="text-gray-900 dark:text-white font-medium">2025-02-20</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Modal Usuario 3: Laura Chen -->
+  <div id="modal-user-3" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-user-3"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Laura Chen</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-3">✕</button>
+      </div>
+      <dl class="space-y-3 text-sm">
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Email</dt><dd class="text-gray-900 dark:text-white font-medium">laura@dataflow.com</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Plan</dt><dd class="text-gray-900 dark:text-white font-medium">Pro</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Estado</dt><dd><span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400">Inactivo</span></dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Empresa</dt><dd class="text-gray-900 dark:text-white font-medium">DataFlow Inc</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Registro</dt><dd class="text-gray-900 dark:text-white font-medium">2024-11-05</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Modal Usuario 4: Carlos Méndez -->
+  <div id="modal-user-4" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-user-4"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Carlos Méndez</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-4">✕</button>
+      </div>
+      <dl class="space-y-3 text-sm">
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Email</dt><dd class="text-gray-900 dark:text-white font-medium">carlos@startup.dev</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Plan</dt><dd class="text-gray-900 dark:text-white font-medium">Free</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Estado</dt><dd><span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span></dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Empresa</dt><dd class="text-gray-900 dark:text-white font-medium">Startup Dev</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Registro</dt><dd class="text-gray-900 dark:text-white font-medium">2025-03-14</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Modal Usuario 5: Sarah Johnson -->
+  <div id="modal-user-5" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-user-5"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Sarah Johnson</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-user-5">✕</button>
+      </div>
+      <dl class="space-y-3 text-sm">
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Email</dt><dd class="text-gray-900 dark:text-white font-medium">sarah@techlab.co</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Plan</dt><dd class="text-gray-900 dark:text-white font-medium">Enterprise</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Estado</dt><dd><span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300">Suspendido</span></dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Empresa</dt><dd class="text-gray-900 dark:text-white font-medium">TechLab</dd></div>
+        <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Registro</dt><dd class="text-gray-900 dark:text-white font-medium">2024-09-22</dd></div>
+      </dl>
+    </div>
+  </div>
 
   <script>
     // ─────────────────────────────────────────────
@@ -410,6 +604,64 @@
     });
 
     console.log('AgentHub Admin — Etapa 2: sidebar + navegación + dark mode ✅');
+
+    // ─────────────────────────────────────────────
+    // DROPDOWNS ⋮ — un solo abierto a la vez
+    // ─────────────────────────────────────────────
+    function closeAllDropdowns() {
+      document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.add('hidden'));
+    }
+
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('.dropdown-btn');
+      if (btn) {
+        e.stopPropagation();
+        const targetId = btn.dataset.dropdown;
+        const menu = document.getElementById(targetId);
+        const isOpen = !menu.classList.contains('hidden');
+        closeAllDropdowns();
+        if (!isOpen) menu.classList.remove('hidden');
+        return;
+      }
+      // Clic fuera de cualquier dropdown → cerrar todos
+      if (!e.target.closest('.dropdown-menu')) closeAllDropdowns();
+    });
+
+    // ─────────────────────────────────────────────
+    // MODALES — abrir / cerrar
+    // ─────────────────────────────────────────────
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.add('hidden');
+    }
+
+    // Abrir modal desde botón "Ver detalle"
+    document.addEventListener('click', e => {
+      const openBtn = e.target.closest('.open-modal');
+      if (openBtn) {
+        closeAllDropdowns();
+        openModal(openBtn.dataset.modal);
+      }
+    });
+
+    // Cerrar modal con botón ✕
+    document.addEventListener('click', e => {
+      const closeBtn = e.target.closest('.close-modal');
+      if (closeBtn) closeModal(closeBtn.dataset.modal);
+    });
+
+    // Cerrar modal con clic en el backdrop
+    document.addEventListener('click', e => {
+      const backdrop = e.target.closest('[data-close-modal]');
+      if (backdrop && backdrop === e.target) closeModal(backdrop.dataset.closeModal);
+    });
+
+    console.log('AgentHub Admin — Etapa 4: tabla usuarios + dropdowns + modales ✅');
   </script>
 
 </body>
