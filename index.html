@@ -672,9 +672,134 @@
 
         <!-- ── Sección: Contrataciones ────────────── -->
         <section id="sec-contrataciones" class="hidden space-y-6">
-          <div class="rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 text-center text-gray-400 dark:text-gray-500">
-            Contrataciones — Etapa 7
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+            <table class="w-full text-sm text-left">
+              <thead class="bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
+                <tr>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Cliente</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Agente</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Skills Contratadas</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Vigencia</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Importe</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs text-right">Acciones</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+
+                <!-- Fila 1: Acme Corp - Atlas -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Acme Corp</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Atlas</td>
+                  <td class="px-6 py-4">
+                    <div class="flex flex-wrap gap-1">
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Web Browsing</span>
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Document Reading</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
+                    <div class="text-xs">
+                      <span>15/01/2025</span><br>
+                      <span class="text-gray-400">al 15/07/2025</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-950 dark:text-gray-50 font-semibold">$4,200</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-contract-1">⋮</button>
+                      <div id="dd-contract-1" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-1">Ver detalle</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Fila 2: ByteWorks - Hermes -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">ByteWorks</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Hermes</td>
+                  <td class="px-6 py-4">
+                    <div class="flex flex-wrap gap-1">
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Calendar Management</span>
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Email Drafting</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
+                    <div class="text-xs">
+                      <span>01/03/2025</span><br>
+                      <span class="text-gray-400">al 01/09/2025</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-950 dark:text-gray-50 font-semibold">$3,600</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-contract-2">⋮</button>
+                      <div id="dd-contract-2" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-2">Ver detalle</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Fila 3: Acme Corp - Nova -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Acme Corp</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Nova</td>
+                  <td class="px-6 py-4">
+                    <div class="flex flex-wrap gap-1">
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Web Browsing</span>
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Data Analysis</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
+                    <div class="text-xs">
+                      <span>10/02/2025</span><br>
+                      <span class="text-gray-400">al 10/08/2025</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-950 dark:text-gray-50 font-semibold">$3,800</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-contract-3">⋮</button>
+                      <div id="dd-contract-3" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-3">Ver detalle</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Fila 4: DataFlow Inc - Sentinel -->
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">DataFlow Inc</td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300">Sentinel</td>
+                  <td class="px-6 py-4">
+                    <div class="flex flex-wrap gap-1">
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Document Reading</span>
+                      <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-650 dark:text-gray-350">Calendar Management</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400">
+                    <div class="text-xs">
+                      <span>01/11/2024</span><br>
+                      <span class="text-gray-400">al 01/05/2025</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-950 dark:text-gray-50 font-semibold">$4,000</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-contract-4">⋮</button>
+                      <!-- Abre hacia arriba al ser el último registro -->
+                      <div id="dd-contract-4" class="dropdown-menu hidden absolute right-0 bottom-full mb-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-4">Ver detalle</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
           </div>
+
         </section>
 
         <!-- ── Sección: Log de errores ────────────── -->
@@ -1063,6 +1188,235 @@
         </div>
         <div class="flex justify-end pt-3">
           <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-skill-5">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MODALES DE DESGLOSE DE CONTRATACIONES
+  ════════════════════════════════════════════ -->
+
+  <!-- Modal Contrato 1: Acme Corp - Atlas -->
+  <div id="modal-contract-1" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-contract-1"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Desglose de Contrato — Acme Corp</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-1">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-sm border-b border-gray-100 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400 text-xs">Agente alquilado</span><p class="font-medium text-gray-900 dark:text-white">Atlas</p></div>
+          <div><span class="text-gray-400 text-xs">Vigencia</span><p class="font-medium text-gray-900 dark:text-white">6 Meses</p></div>
+        </div>
+
+        <!-- Tabla de precios desglosada -->
+        <table class="w-full text-sm text-left">
+          <thead>
+            <tr class="text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">
+              <th class="pb-2 font-medium">Concepto</th>
+              <th class="pb-2 text-right font-medium">Precio mensual</th>
+              <th class="pb-2 text-right font-medium">Meses</th>
+              <th class="pb-2 text-right font-medium">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Web Browsing</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$200</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,200</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Document Reading</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$300</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,800</td>
+            </tr>
+            <tr class="text-gray-500 dark:text-gray-400">
+              <td class="py-2.5 colspan-2" colspan="3">Fee de plataforma</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,200</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="border-t-2 border-gray-200 dark:border-gray-600 font-bold text-gray-900 dark:text-white">
+              <td class="pt-3" colspan="3">Total del Contrato</td>
+              <td class="pt-3 text-right text-brand-600 dark:text-brand-400 text-base">$4,200</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-contract-1">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Contrato 2: ByteWorks - Hermes -->
+  <div id="modal-contract-2" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-contract-2"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Desglose de Contrato — ByteWorks</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-2">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-sm border-b border-gray-100 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400 text-xs">Agente alquilado</span><p class="font-medium text-gray-900 dark:text-white">Hermes</p></div>
+          <div><span class="text-gray-400 text-xs">Vigencia</span><p class="font-medium text-gray-900 dark:text-white">6 Meses</p></div>
+        </div>
+
+        <table class="w-full text-sm text-left">
+          <thead>
+            <tr class="text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">
+              <th class="pb-2 font-medium">Concepto</th>
+              <th class="pb-2 text-right font-medium">Precio mensual</th>
+              <th class="pb-2 text-right font-medium">Meses</th>
+              <th class="pb-2 text-right font-medium">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Calendar Management</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$150</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$900</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Email Drafting</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$200</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,200</td>
+            </tr>
+            <tr class="text-gray-500 dark:text-gray-400">
+              <td class="py-2.5 colspan-2" colspan="3">Fee de plataforma</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,500</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="border-t-2 border-gray-200 dark:border-gray-600 font-bold text-gray-900 dark:text-white">
+              <td class="pt-3" colspan="3">Total del Contrato</td>
+              <td class="pt-3 text-right text-brand-600 dark:text-brand-400 text-base">$3,600</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-contract-2">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Contrato 3: Acme Corp - Nova -->
+  <div id="modal-contract-3" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-contract-3"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Desglose de Contrato — Acme Corp</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-3">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-sm border-b border-gray-100 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400 text-xs">Agente alquilado</span><p class="font-medium text-gray-900 dark:text-white">Nova</p></div>
+          <div><span class="text-gray-400 text-xs">Vigencia</span><p class="font-medium text-gray-900 dark:text-white">6 Meses</p></div>
+        </div>
+
+        <table class="w-full text-sm text-left">
+          <thead>
+            <tr class="text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">
+              <th class="pb-2 font-medium">Concepto</th>
+              <th class="pb-2 text-right font-medium">Precio mensual</th>
+              <th class="pb-2 text-right font-medium">Meses</th>
+              <th class="pb-2 text-right font-medium">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Web Browsing</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$200</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,200</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Data Analysis</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$250</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,500</td>
+            </tr>
+            <tr class="text-gray-500 dark:text-gray-400">
+              <td class="py-2.5 colspan-2" colspan="3">Fee de plataforma</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,100</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="border-t-2 border-gray-200 dark:border-gray-600 font-bold text-gray-900 dark:text-white">
+              <td class="pt-3" colspan="3">Total del Contrato</td>
+              <td class="pt-3 text-right text-brand-600 dark:text-brand-400 text-base">$3,800</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-contract-3">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Contrato 4: DataFlow Inc - Sentinel -->
+  <div id="modal-contract-4" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-contract-4"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Desglose de Contrato — DataFlow Inc</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-contract-4">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-sm border-b border-gray-100 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400 text-xs">Agente alquilado</span><p class="font-medium text-gray-900 dark:text-white">Sentinel</p></div>
+          <div><span class="text-gray-400 text-xs">Vigencia</span><p class="font-medium text-gray-900 dark:text-white">6 Meses</p></div>
+        </div>
+
+        <table class="w-full text-sm text-left">
+          <thead>
+            <tr class="text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">
+              <th class="pb-2 font-medium">Concepto</th>
+              <th class="pb-2 text-right font-medium">Precio mensual</th>
+              <th class="pb-2 text-right font-medium">Meses</th>
+              <th class="pb-2 text-right font-medium">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Document Reading</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$300</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,800</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 font-medium text-gray-800 dark:text-gray-200">Calendar Management</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">$150</td>
+              <td class="py-2.5 text-right text-gray-500 dark:text-gray-400">6</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$900</td>
+            </tr>
+            <tr class="text-gray-500 dark:text-gray-400">
+              <td class="py-2.5 colspan-2" colspan="3">Fee de plataforma</td>
+              <td class="py-2.5 text-right text-gray-900 dark:text-white font-medium">$1,300</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="border-t-2 border-gray-200 dark:border-gray-600 font-bold text-gray-900 dark:text-white">
+              <td class="pt-3" colspan="3">Total del Contrato</td>
+              <td class="pt-3 text-right text-brand-600 dark:text-brand-400 text-base">$4,000</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-contract-4">Cerrar</button>
         </div>
       </div>
     </div>
