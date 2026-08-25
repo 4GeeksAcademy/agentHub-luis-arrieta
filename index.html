@@ -56,13 +56,94 @@
       id="sidebar"
       class="w-64 shrink-0 flex flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 h-screen overflow-y-auto"
     >
-      <!-- Placeholder: contenido en Etapa 2 -->
-      <div class="p-6 border-b border-gray-200 dark:border-gray-800">
-        <span class="text-lg font-bold text-brand-600 dark:text-brand-400">AgentHub</span>
+      <!-- ── Logo ──────────────────────────────────── -->
+      <div class="flex items-center gap-3 px-6 h-16 border-b border-gray-200 dark:border-gray-800 shrink-0">
+        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center shrink-0">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <span class="text-lg font-bold text-gray-900 dark:text-white tracking-tight">AgentHub</span>
       </div>
-      <nav class="flex-1 p-4">
-        <p class="text-xs text-gray-400 px-3 py-2">Navegación — Etapa 2</p>
+
+      <!-- ── Navegación ─────────────────────────────── -->
+      <nav class="flex-1 px-3 py-4 space-y-1" aria-label="Navegación principal">
+
+        <!-- Dashboard -->
+        <a href="#" data-section="dashboard"
+          class="nav-item active-section group flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+          aria-current="page"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+
+        <!-- Gestión de Usuarios -->
+        <a href="#" data-section="usuarios"
+          class="nav-item group flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <span>Usuarios</span>
+        </a>
+
+        <!-- Gestión de Agentes -->
+        <a href="#" data-section="agentes"
+          class="nav-item group flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+          </svg>
+          <span>Agentes</span>
+        </a>
+
+        <!-- Skills -->
+        <a href="#" data-section="skills"
+          class="nav-item group flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+          </svg>
+          <span>Skills</span>
+        </a>
+
+        <!-- Contrataciones -->
+        <a href="#" data-section="contrataciones"
+          class="nav-item group flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          <span>Contrataciones</span>
+        </a>
+
+        <!-- Log de Errores -->
+        <a href="#" data-section="errores"
+          class="nav-item group flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+          <span>Log de Errores</span>
+        </a>
+
       </nav>
+
+      <!-- ── Footer de sidebar ───────────────────────── -->
+      <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800 shrink-0">
+        <p class="text-xs text-gray-400 dark:text-gray-500">AgentHub Admin v1.0</p>
+      </div>
+
     </aside>
 
     <!-- ═══════════════════════════════════════════
@@ -79,9 +160,24 @@
         <h1 id="section-title" class="text-lg font-semibold text-gray-800 dark:text-gray-100">
           Dashboard
         </h1>
-        <!-- Placeholder toggle dark mode — Etapa 2 -->
-        <button class="p-2 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-          <span class="text-sm">🌙 / ☀️ — Etapa 2</span>
+        <!-- Toggle dark / light mode -->
+        <button
+          id="dark-toggle"
+          type="button"
+          aria-label="Cambiar modo oscuro/claro"
+          class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-150"
+        >
+          <!-- Icono Luna (visible en modo claro) -->
+          <svg id="icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <!-- Icono Sol (visible en modo oscuro) -->
+          <svg id="icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <span id="toggle-label" class="hidden sm:inline">Modo oscuro</span>
         </button>
       </header>
 
@@ -138,11 +234,115 @@
 
   </div><!-- /flex wrapper -->
 
-  <!-- JavaScript — Etapa 2+ -->
   <script>
-    // Navegación básica: placeholder hasta Etapa 2
-    console.log('AgentHub Admin — Etapa 1: esqueleto listo ✅');
+    // ─────────────────────────────────────────────
+    // CONFIGURACIÓN: mapa de secciones
+    // ─────────────────────────────────────────────
+    const SECTIONS = {
+      dashboard:      { id: 'sec-dashboard',      title: 'Dashboard' },
+      usuarios:       { id: 'sec-usuarios',       title: 'Gestión de Usuarios' },
+      agentes:        { id: 'sec-agentes',        title: 'Gestión de Agentes' },
+      skills:         { id: 'sec-skills',         title: 'Skills' },
+      contrataciones: { id: 'sec-contrataciones', title: 'Contrataciones' },
+      errores:        { id: 'sec-errores',        title: 'Log de Errores' },
+    };
+
+    // ─────────────────────────────────────────────
+    // NAVEGACIÓN ENTRE SECCIONES
+    // ─────────────────────────────────────────────
+    let currentSection = 'dashboard';
+
+    function navigateTo(sectionKey) {
+      if (!SECTIONS[sectionKey]) return;
+
+      // Ocultar sección actual, mostrar la nueva
+      document.getElementById(SECTIONS[currentSection].id).classList.add('hidden');
+      document.getElementById(SECTIONS[sectionKey].id).classList.remove('hidden');
+
+      // Actualizar título del header
+      document.getElementById('section-title').textContent = SECTIONS[sectionKey].title;
+
+      // Actualizar estado activo en la sidebar
+      document.querySelectorAll('.nav-item').forEach(link => {
+        const isActive = link.dataset.section === sectionKey;
+        link.classList.toggle('active-section', isActive);
+        link.setAttribute('aria-current', isActive ? 'page' : 'false');
+      });
+
+      currentSection = sectionKey;
+    }
+
+    // Listeners de navegación
+    document.querySelectorAll('.nav-item').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        navigateTo(link.dataset.section);
+      });
+    });
+
+    // Estilos de nav-item: activo vs inactivo (via CSS clases dinámicas)
+    // Aplicados con JS para evitar duplicar clases en el HTML
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+      .nav-item {
+        color: #6b7280; /* gray-500 */
+      }
+      .nav-item:hover {
+        background-color: #f9fafb; /* gray-50 */
+        color: #111827; /* gray-900 */
+      }
+      .nav-item.active-section {
+        background-color: #eef2ff; /* brand-50/indigo-50 */
+        color: #4f46e5; /* brand-600 */
+        font-weight: 600;
+      }
+      .dark .nav-item {
+        color: #9ca3af; /* gray-400 */
+      }
+      .dark .nav-item:hover {
+        background-color: #1f2937; /* gray-800 */
+        color: #f9fafb; /* gray-50 */
+      }
+      .dark .nav-item.active-section {
+        background-color: #312e81; /* brand-900 */
+        color: #a5b4fc; /* brand-300 */
+      }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // ─────────────────────────────────────────────
+    // DARK MODE TOGGLE
+    // ─────────────────────────────────────────────
+    const htmlEl      = document.documentElement;
+    const toggleBtn   = document.getElementById('dark-toggle');
+    const iconMoon    = document.getElementById('icon-moon');
+    const iconSun     = document.getElementById('icon-sun');
+    const toggleLabel = document.getElementById('toggle-label');
+
+    function applyDarkMode(isDark) {
+      htmlEl.classList.toggle('dark', isDark);
+      iconMoon.classList.toggle('hidden', isDark);
+      iconSun.classList.toggle('hidden', !isDark);
+      toggleLabel.textContent = isDark ? 'Modo claro' : 'Modo oscuro';
+    }
+
+    // Leer preferencia guardada al cargar
+    const savedMode = localStorage.getItem('agenthub-dark-mode');
+    const prefersDark = savedMode !== null
+      ? savedMode === 'true'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyDarkMode(prefersDark);
+
+    // Listener del botón toggle
+    toggleBtn.addEventListener('click', () => {
+      const isDark = !htmlEl.classList.contains('dark');
+      applyDarkMode(isDark);
+      localStorage.setItem('agenthub-dark-mode', isDark);
+    });
+
+    console.log('AgentHub Admin — Etapa 2: sidebar + navegación + dark mode ✅');
   </script>
 
 </body>
 </html>
+
