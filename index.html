@@ -540,9 +540,134 @@
 
         <!-- ── Sección: Skills ────────────────────── -->
         <section id="sec-skills" class="hidden space-y-6">
-          <div class="rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 text-center text-gray-400 dark:text-gray-500">
-            Skills — Etapa 6
+
+          <!-- Texto explicativo (callout) -->
+          <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-lg">
+            <div class="flex gap-3">
+              <div class="text-blue-500 shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p class="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
+                Las skills son capacidades modulares que se pueden asignar a los agentes de IA. Cada skill le permite al agente realizar una tarea específica — como navegar por la web, leer documentos, gestionar calendarios o analizar datos. Un agente puede tener múltiples skills activas simultáneamente.
+              </p>
+            </div>
           </div>
+
+          <!-- Catálogo de skills (cards) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Skill 1: Web Browsing -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div class="flex justify-between items-start gap-4">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white">Web Browsing</h3>
+                  <div class="relative shrink-0">
+                    <button class="dropdown-btn p-1 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-skill-1">⋮</button>
+                    <div id="dd-skill-1" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                      <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-1">Ver detalle</button>
+                      <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar skill Web Browsing')">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">Navega por sitios web y extrae información estructurada de páginas públicas.</p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+                <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold">2</span>
+                <span>Agentes usándola</span>
+              </div>
+            </div>
+
+            <!-- Skill 2: Document Reading -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div class="flex justify-between items-start gap-4">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white">Document Reading</h3>
+                  <div class="relative shrink-0">
+                    <button class="dropdown-btn p-1 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-skill-2">⋮</button>
+                    <div id="dd-skill-2" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                      <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-2">Ver detalle</button>
+                      <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar skill Document Reading')">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">Lee y analiza documentos PDF, Word y archivos de texto plano.</p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+                <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold">2</span>
+                <span>Agentes usándola</span>
+              </div>
+            </div>
+
+            <!-- Skill 3: Calendar Management -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div class="flex justify-between items-start gap-4">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white">Calendar Management</h3>
+                  <div class="relative shrink-0">
+                    <button class="dropdown-btn p-1 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-skill-3">⋮</button>
+                    <div id="dd-skill-3" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                      <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-3">Ver detalle</button>
+                      <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar skill Calendar Management')">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">Gestiona eventos, citas y recordatorios de calendarios organizacionales.</p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+                <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold">2</span>
+                <span>Agentes usándola</span>
+              </div>
+            </div>
+
+            <!-- Skill 4: Email Drafting -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div class="flex justify-between items-start gap-4">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white">Email Drafting</h3>
+                  <div class="relative shrink-0">
+                    <button class="dropdown-btn p-1 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-skill-4">⋮</button>
+                    <!-- Al estar abajo, se abre hacia arriba (dropup) -->
+                    <div id="dd-skill-4" class="dropdown-menu hidden absolute right-0 bottom-full mb-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                      <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-4">Ver detalle</button>
+                      <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar skill Email Drafting')">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">Redacta y envía borradores de correo electrónico profesionales con tono adaptable.</p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+                <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold">1</span>
+                <span>Agente usándola</span>
+              </div>
+            </div>
+
+            <!-- Skill 5: Data Analysis -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div class="flex justify-between items-start gap-4">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white">Data Analysis</h3>
+                  <div class="relative shrink-0">
+                    <button class="dropdown-btn p-1 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-skill-5">⋮</button>
+                    <!-- Al estar abajo, se abre hacia arriba (dropup) -->
+                    <div id="dd-skill-5" class="dropdown-menu hidden absolute right-0 bottom-full mb-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                      <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-5">Ver detalle</button>
+                      <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar skill Data Analysis')">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">Procesa y analiza conjuntos de datos complejos para extraer métricas y resúmenes.</p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+                <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold">1</span>
+                <span>Agente usándola</span>
+              </div>
+            </div>
+
+          </div>
+
         </section>
 
         <!-- ── Sección: Contrataciones ────────────── -->
@@ -741,6 +866,203 @@
         <div class="flex justify-end gap-3">
           <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors" data-modal="modal-agent-4">Cancelar</button>
           <button class="px-4 py-2 rounded-lg text-sm font-medium bg-brand-600 hover:bg-brand-500 text-white transition-colors" onclick="alert('Configuración guardada (simulado)')">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MODALES DE DETALLE DE SKILLS
+  ════════════════════════════════════════════ -->
+
+  <!-- Modal Skill 1: Web Browsing -->
+  <div id="modal-skill-1" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-skill-1"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Skill: Web Browsing</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-1">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Descripción</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+            Permite al agente navegar por sitios web públicos, seguir enlaces de forma recursiva, y extraer contenido legible o estructurado (JSON, tablas, etc.) omitiendo la publicidad y menús de navegación.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Agentes asignados</h4>
+          <div class="flex gap-2 mt-1.5">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Atlas</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Nova</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 pt-2 text-xs">
+          <div>
+            <span class="text-gray-400">Fecha de creación</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-01-05</p>
+          </div>
+          <div>
+            <span class="text-gray-400">Límite de peticiones</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">100 / minuto</p>
+          </div>
+        </div>
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-250 transition-colors" data-modal="modal-skill-1">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Skill 2: Document Reading -->
+  <div id="modal-skill-2" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-skill-2"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Skill: Document Reading</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-2">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Descripción</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+            Capacidad para leer, parsear y extraer texto de archivos PDF, DOCX, TXT y CSV. Soporta análisis de tablas y OCR básico para imágenes escaneadas dentro de los documentos.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Agentes asignados</h4>
+          <div class="flex gap-2 mt-1.5">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Atlas</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Sentinel</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 pt-2 text-xs">
+          <div>
+            <span class="text-gray-400">Fecha de creación</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-01-08</p>
+          </div>
+          <div>
+            <span class="text-gray-400">Límite de tamaño</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">50 MB / archivo</p>
+          </div>
+        </div>
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-250 transition-colors" data-modal="modal-skill-2">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Skill 3: Calendar Management -->
+  <div id="modal-skill-3" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-skill-3"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Skill: Calendar Management</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-3">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Descripción</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+            Habilita al agente a sincronizarse con Google Calendar y Outlook, verificar disponibilidad de horarios, agendar reuniones automáticamente y enviar invitaciones/recordatorios a los participantes.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Agentes asignados</h4>
+          <div class="flex gap-2 mt-1.5">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Hermes</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Sentinel</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 pt-2 text-xs">
+          <div>
+            <span class="text-gray-400">Fecha de creación</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-01-12</p>
+          </div>
+          <div>
+            <span class="text-gray-400">Integraciones</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">GCal, Outlook, Cal.com</p>
+          </div>
+        </div>
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-250 transition-colors" data-modal="modal-skill-3">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Skill 4: Email Drafting -->
+  <div id="modal-skill-4" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-skill-4"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Skill: Email Drafting</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-4">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Descripción</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+            Capacidad para redactar correos electrónicos con tono adaptable (formal, amigable, persuasivo, técnico) basado en directrices. Puede generar borradores listos para revisión o enviarlos automáticamente bajo autorización.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Agentes asignados</h4>
+          <div class="flex gap-2 mt-1.5">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Hermes</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 pt-2 text-xs">
+          <div>
+            <span class="text-gray-400">Fecha de creación</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-01-20</p>
+          </div>
+          <div>
+            <span class="text-gray-400">Idiomas soportados</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">Español, Inglés, Francés</p>
+          </div>
+        </div>
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-250 transition-colors" data-modal="modal-skill-4">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Skill 5: Data Analysis -->
+  <div id="modal-skill-5" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-skill-5"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Skill: Data Analysis</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-skill-5">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Descripción</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+            Habilita al agente a procesar conjuntos de datos en formato Excel, JSON o CSV, calcular sumatorias, promedios, agrupaciones y generar resúmenes estadísticos detallados de manera eficiente.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Agentes asignados</h4>
+          <div class="flex gap-2 mt-1.5">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Nova</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 pt-2 text-xs">
+          <div>
+            <span class="text-gray-400">Fecha de creación</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-02-02</p>
+          </div>
+          <div>
+            <span class="text-gray-400">Formatería soportada</span>
+            <p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">CSV, XLSX, JSON, Parquet</p>
+          </div>
+        </div>
+        <div class="flex justify-end pt-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-250 transition-colors" data-modal="modal-skill-5">Cerrar</button>
         </div>
       </div>
     </div>
