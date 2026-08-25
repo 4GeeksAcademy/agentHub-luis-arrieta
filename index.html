@@ -804,9 +804,140 @@
 
         <!-- ── Sección: Log de errores ────────────── -->
         <section id="sec-errores" class="hidden space-y-6">
-          <div class="rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 text-center text-gray-400 dark:text-gray-500">
-            Log de Errores — Etapa 8
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+            <table class="w-full text-sm text-left">
+              <thead class="bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
+                <tr>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Timestamp</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Agente</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Tipo de error</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs">Descripción</th>
+                  <th class="px-6 py-3 font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider text-xs text-right">Acciones</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+
+                <!-- Error 1: Nova Runtime -->
+                <tr id="error-row-1" class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-300">
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400 font-mono text-xs">2025-06-15 14:32:07</td>
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Nova</td>
+                  <td class="px-6 py-4">
+                    <span class="error-badge inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300">Runtime Error</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300 truncate max-w-xs">Null reference in data processing pipeline</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-error-1">⋮</button>
+                      <div id="dd-error-1" class="dropdown-menu hidden absolute right-0 mt-1 w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-1">Ver detalle</button>
+                        <button class="resolve-error-btn w-full text-left px-4 py-2 text-sm text-green-600 dark:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-row-id="error-row-1">Marcar resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Error 2: Atlas Timeout -->
+                <tr id="error-row-2" class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-300">
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400 font-mono text-xs">2025-06-15 11:15:23</td>
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Atlas</td>
+                  <td class="px-6 py-4">
+                    <span class="error-badge inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-850 dark:bg-yellow-900/40 dark:text-yellow-350">Timeout</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300 truncate max-w-xs">Web request exceeded 30s timeout limit</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-error-2">⋮</button>
+                      <div id="dd-error-2" class="dropdown-menu hidden absolute right-0 mt-1 w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-2">Ver detalle</button>
+                        <button class="resolve-error-btn w-full text-left px-4 py-2 text-sm text-green-600 dark:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-row-id="error-row-2">Marcar resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Error 3: Hermes Rate Limit -->
+                <tr id="error-row-3" class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-300">
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400 font-mono text-xs">2025-06-14 09:47:51</td>
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Hermes</td>
+                  <td class="px-6 py-4">
+                    <span class="error-badge inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-900/40 dark:text-orange-300">Rate Limit</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300 truncate max-w-xs">Calendar API rate limit exceeded</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-error-3">⋮</button>
+                      <div id="dd-error-3" class="dropdown-menu hidden absolute right-0 mt-1 w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-3">Ver detalle</button>
+                        <button class="resolve-error-btn w-full text-left px-4 py-2 text-sm text-green-600 dark:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-row-id="error-row-3">Marcar resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Error 4: Nova Connection -->
+                <tr id="error-row-4" class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-300">
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400 font-mono text-xs">2025-06-14 08:22:10</td>
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Nova</td>
+                  <td class="px-6 py-4">
+                    <span class="error-badge inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300">Connection Error</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300 truncate max-w-xs">Failed to establish database connection</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-error-4">⋮</button>
+                      <div id="dd-error-4" class="dropdown-menu hidden absolute right-0 mt-1 w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-4">Ver detalle</button>
+                        <button class="resolve-error-btn w-full text-left px-4 py-2 text-sm text-green-600 dark:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-row-id="error-row-4">Marcar resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Error 5: Atlas Runtime -->
+                <tr id="error-row-5" class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-300">
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400 font-mono text-xs">2025-06-13 16:05:33</td>
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Atlas</td>
+                  <td class="px-6 py-4">
+                    <span class="error-badge inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300">Runtime Error</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300 truncate max-w-xs">Unexpected response format from target URL</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-error-5">⋮</button>
+                      <!-- Abre hacia arriba al estar en el borde inferior -->
+                      <div id="dd-error-5" class="dropdown-menu hidden absolute right-0 bottom-full mb-1 w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-5">Ver detalle</button>
+                        <button class="resolve-error-btn w-full text-left px-4 py-2 text-sm text-green-600 dark:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-row-id="error-row-5">Marcar resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Error 6: Sentinel Timeout -->
+                <tr id="error-row-6" class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-300">
+                  <td class="px-6 py-4 text-gray-500 dark:text-gray-400 font-mono text-xs">2025-06-13 10:41:18</td>
+                  <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">Sentinel</td>
+                  <td class="px-6 py-4">
+                    <span class="error-badge inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-850 dark:bg-yellow-900/40 dark:text-yellow-350">Timeout</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-700 dark:text-gray-300 truncate max-w-xs">Document parsing exceeded time limit</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-error-6">⋮</button>
+                      <!-- Abre hacia arriba al estar al final -->
+                      <div id="dd-error-6" class="dropdown-menu hidden absolute right-0 bottom-full mb-1 w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                        <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-6">Ver detalle</button>
+                        <button class="resolve-error-btn w-full text-left px-4 py-2 text-sm text-green-600 dark:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-row-id="error-row-6">Marcar resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
           </div>
+
         </section>
 
       </main>
@@ -1422,6 +1553,201 @@
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════
+       MODALES DE LOG DE ERRORES
+  ════════════════════════════════════════════ -->
+
+  <!-- Modal Error 1 -->
+  <div id="modal-error-1" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-error-1"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-xl w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Error: Nova</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-1">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-xs border-b border-gray-150 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400">Timestamp</span><p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-06-15 14:32:07</p></div>
+          <div><span class="text-gray-400">Tipo de error</span><p class="font-medium text-red-650 dark:text-red-400 mt-0.5">Runtime Error</p></div>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400">Descripción</span>
+          <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mt-0.5">Null reference in data processing pipeline</p>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block mb-1">Traza de error (Stack Trace)</span>
+          <pre class="font-mono bg-gray-950 text-green-400 p-4 rounded-lg overflow-x-auto text-xs leading-relaxed max-h-48">TypeError: Cannot read properties of undefined (reading 'data_pipeline')
+    at DataProcessor.process (nova/src/pipeline.js:124:34)
+    at Agent.executeTask (nova/src/agent.js:89:12)
+    at runAgentJob (core/src/scheduler.js:45:21)
+    at processImmediate (node:internal/timers:476:21)</pre>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-error-1">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Error 2 -->
+  <div id="modal-error-2" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-error-2"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-xl w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Error: Atlas</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-2">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-xs border-b border-gray-150 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400">Timestamp</span><p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-06-15 11:15:23</p></div>
+          <div><span class="text-gray-400">Tipo de error</span><p class="font-medium text-yellow-650 dark:text-yellow-400 mt-0.5">Timeout</p></div>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400">Descripción</span>
+          <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mt-0.5">Web request exceeded 30s timeout limit</p>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block mb-1">Traza de error (Stack Trace)</span>
+          <pre class="font-mono bg-gray-950 text-green-400 p-4 rounded-lg overflow-x-auto text-xs leading-relaxed max-h-48">RequestTimeoutError: Web request timed out after 30000ms
+    at HTTPClient.request (atlas/src/http.js:204:19)
+    at WebBrowser.fetch (atlas/src/browser.js:45:34)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-error-2">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Error 3 -->
+  <div id="modal-error-3" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-error-3"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-xl w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Error: Hermes</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-3">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-xs border-b border-gray-150 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400">Timestamp</span><p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-06-14 09:47:51</p></div>
+          <div><span class="text-gray-400">Tipo de error</span><p class="font-medium text-orange-600 dark:text-orange-400 mt-0.5">Rate Limit</p></div>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400">Descripción</span>
+          <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mt-0.5">Calendar API rate limit exceeded</p>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block mb-1">Traza de error (Stack Trace)</span>
+          <pre class="font-mono bg-gray-950 text-green-400 p-4 rounded-lg overflow-x-auto text-xs leading-relaxed max-h-48">APIError: HTTP 429 Too Many Requests (calendar.googleapis.com)
+    at GoogleCalendarProvider.sync (hermes/src/providers/google.js:88:23)
+    at SyncService.run (hermes/src/services/sync.js:45:19)
+    at runAgentJob (core/src/scheduler.js:45:21)</pre>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-error-3">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Error 4 -->
+  <div id="modal-error-4" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-error-4"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-xl w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Error: Nova</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-4">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-xs border-b border-gray-150 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400">Timestamp</span><p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-06-14 08:22:10</p></div>
+          <div><span class="text-gray-400">Tipo de error</span><p class="font-medium text-purple-650 dark:text-purple-400 mt-0.5">Connection Error</p></div>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400">Descripción</span>
+          <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mt-0.5">Failed to establish database connection</p>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block mb-1">Traza de error (Stack Trace)</span>
+          <pre class="font-mono bg-gray-950 text-green-400 p-4 rounded-lg overflow-x-auto text-xs leading-relaxed max-h-48">DatabaseConnectionError: Connection lost to postgresql://db.acmecorp.com:5432
+    at DatabaseDriver.connect (nova/src/db.js:34:11)
+    at DataStore.init (nova/src/store.js:12:20)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-error-4">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Error 5 -->
+  <div id="modal-error-5" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-error-5"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-xl w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Error: Atlas</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-5">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-xs border-b border-gray-150 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400">Timestamp</span><p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-06-13 16:05:33</p></div>
+          <div><span class="text-gray-400">Tipo de error</span><p class="font-medium text-red-650 dark:text-red-400 mt-0.5">Runtime Error</p></div>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400">Descripción</span>
+          <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mt-0.5">Unexpected response format from target URL</p>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block mb-1">Traza de error (Stack Trace)</span>
+          <pre class="font-mono bg-gray-950 text-green-400 p-4 rounded-lg overflow-x-auto text-xs leading-relaxed max-h-48">JSONParseException: Unexpected token &lt; in JSON at position 0
+    at HTTPClient.request (atlas/src/http.js:210:30)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async WebBrowser.fetch (atlas/src/browser.js:45:15)</pre>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-error-5">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Error 6 -->
+  <div id="modal-error-6" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-error-6"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-xl w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Detalle de Error: Sentinel</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-error-6">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-2 text-xs border-b border-gray-150 dark:border-gray-700 pb-3">
+          <div><span class="text-gray-400">Timestamp</span><p class="font-medium text-gray-700 dark:text-gray-300 mt-0.5">2025-06-13 10:41:18</p></div>
+          <div><span class="text-gray-400">Tipo de error</span><p class="font-medium text-yellow-650 dark:text-yellow-400 mt-0.5">Timeout</p></div>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400">Descripción</span>
+          <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mt-0.5">Document parsing exceeded time limit</p>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block mb-1">Traza de error (Stack Trace)</span>
+          <pre class="font-mono bg-gray-950 text-green-400 p-4 rounded-lg overflow-x-auto text-xs leading-relaxed max-h-48">TimeoutError: Parser execution timed out after 10000ms
+    at PDFParser.parse (sentinel/src/parser.js:56:19)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async DocumentAnalyzer.run (sentinel/src/analyzer.js:23:12)</pre>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors" data-modal="modal-error-6">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // ─────────────────────────────────────────────
     // CONFIGURACIÓN: mapa de secciones
@@ -1614,6 +1940,30 @@
     });
 
     console.log('AgentHub Admin — Etapa 5: gestión de agentes + cards + skills colapsables + modales prompt ✅');
+
+    // ─────────────────────────────────────────────
+    // LOG DE ERRORES — marcar como resuelto
+    // ─────────────────────────────────────────────
+    document.addEventListener('click', e => {
+      const resolveBtn = e.target.closest('.resolve-error-btn');
+      if (resolveBtn) {
+        closeAllDropdowns();
+        const rowId = resolveBtn.dataset.rowId;
+        const row = document.getElementById(rowId);
+        if (row) {
+          // Cambiar opacidad de la fila
+          row.classList.add('opacity-50');
+          // Cambiar el badge a "Resuelto" (verde)
+          const badge = row.querySelector('.error-badge');
+          if (badge) {
+            badge.textContent = 'Resuelto';
+            badge.className = 'error-badge inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300';
+          }
+        }
+      }
+    });
+
+    console.log('AgentHub Admin Panel — Prototipo final completo y verificado ✅');
   </script>
 
 </body>
