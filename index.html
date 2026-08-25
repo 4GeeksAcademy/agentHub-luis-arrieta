@@ -371,10 +371,171 @@
         </section>
 
         <!-- ── Sección: Agentes ───────────────────── -->
-        <section id="sec-agentes" class="hidden space-y-6">
-          <div class="rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 text-center text-gray-400 dark:text-gray-500">
-            Gestión de Agentes — Etapa 5
+        <section id="sec-agentes" class="hidden space-y-4">
+
+          <!-- Atlas Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between gap-4">
+              <!-- Información del agente -->
+              <div class="flex items-center gap-4 min-w-0">
+                <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold shrink-0">
+                  A
+                </div>
+                <div class="min-w-0">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white truncate">Atlas</h3>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 truncate">Propietario: Acme Corp</p>
+                </div>
+                <span class="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span>
+              </div>
+              <!-- Controles del agente -->
+              <div class="flex items-center gap-2 shrink-0">
+                <button class="toggle-skills-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  <span>Ver skills</span>
+                  <svg class="chevron-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="relative">
+                  <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-agent-1">⋮</button>
+                  <div id="dd-agent-1" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                    <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-1">Configurar</button>
+                    <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar agente Atlas')">Eliminar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Panel colapsable de skills -->
+            <div class="skills-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-4">
+                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">Skills asignadas:</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Web Browsing</span>
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Document Reading</span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Hermes Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold shrink-0">
+                  H
+                </div>
+                <div class="min-w-0">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white truncate">Hermes</h3>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 truncate">Propietario: ByteWorks</p>
+                </div>
+                <span class="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Activo</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button class="toggle-skills-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  <span>Ver skills</span>
+                  <svg class="chevron-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="relative">
+                  <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-agent-2">⋮</button>
+                  <div id="dd-agent-2" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                    <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-2">Configurar</button>
+                    <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar agente Hermes')">Eliminar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-4">
+                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">Skills asignadas:</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Calendar Management</span>
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Email Drafting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nova Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold shrink-0">
+                  N
+                </div>
+                <div class="min-w-0">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white truncate">Nova</h3>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 truncate">Propietario: Acme Corp</p>
+                </div>
+                <span class="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">Fallando</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button class="toggle-skills-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  <span>Ver skills</span>
+                  <svg class="chevron-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="relative">
+                  <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-agent-3">⋮</button>
+                  <div id="dd-agent-3" class="dropdown-menu hidden absolute right-0 mt-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                    <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-3">Configurar</button>
+                    <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar agente Nova')">Eliminar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-4">
+                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">Skills asignadas:</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Web Browsing</span>
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Data Analysis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sentinel Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold shrink-0">
+                  S
+                </div>
+                <div class="min-w-0">
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white truncate">Sentinel</h3>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 truncate">Propietario: DataFlow Inc</p>
+                </div>
+                <span class="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400">Inactivo</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button class="toggle-skills-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  <span>Ver skills</span>
+                  <svg class="chevron-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="relative">
+                  <button class="dropdown-btn p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-dropdown="dd-agent-4">⋮</button>
+                  <div id="dd-agent-4" class="dropdown-menu hidden absolute right-0 bottom-full mb-1 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-10 py-1">
+                    <button class="open-modal w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-4">Configurar</button>
+                    <button class="w-full text-left px-4 py-2 text-sm text-rose-600 dark:text-rose-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" onclick="alert('Acción simulada: eliminar agente Sentinel')">Eliminar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-4">
+                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">Skills asignadas:</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Document Reading</span>
+                  <span class="inline-flex px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300">Calendar Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         <!-- ── Sección: Skills ────────────────────── -->
@@ -494,6 +655,94 @@
         <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Empresa</dt><dd class="text-gray-900 dark:text-white font-medium">TechLab</dd></div>
         <div class="flex justify-between"><dt class="text-gray-500 dark:text-gray-400">Registro</dt><dd class="text-gray-900 dark:text-white font-medium">2024-09-22</dd></div>
       </dl>
+    </div>
+  </div>
+  
+  <!-- ═══════════════════════════════════════════
+       MODALES DE CONFIGURACIÓN DE AGENTES
+  ════════════════════════════════════════════ -->
+
+  <!-- Modal Agente 1: Atlas -->
+  <div id="modal-agent-1" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-agent-1"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Configurar Prompt — Atlas</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-1">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase">Prompt del sistema</label>
+          <textarea class="w-full h-48 p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">Eres Atlas, un agente de lectura y análisis de documentos. Tu meta es procesar textos y responder preguntas del usuario basándote en la información dada.</textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors" data-modal="modal-agent-1">Cancelar</button>
+          <button class="px-4 py-2 rounded-lg text-sm font-medium bg-brand-600 hover:bg-brand-500 text-white transition-colors" onclick="alert('Configuración guardada (simulado)')">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Agente 2: Hermes -->
+  <div id="modal-agent-2" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-agent-2"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Configurar Prompt — Hermes</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-2">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase">Prompt del sistema</label>
+          <textarea class="w-full h-48 p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">Eres Hermes, un agente de coordinación y comunicación. Gestionas calendarios y agendas, y redactas respuestas de correo electrónico fluidas y profesionales.</textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors" data-modal="modal-agent-2">Cancelar</button>
+          <button class="px-4 py-2 rounded-lg text-sm font-medium bg-brand-600 hover:bg-brand-500 text-white transition-colors" onclick="alert('Configuración guardada (simulado)')">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Agente 3: Nova -->
+  <div id="modal-agent-3" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-agent-3"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Configurar Prompt — Nova</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-3">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase">Prompt del sistema</label>
+          <textarea class="w-full h-48 p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">Eres Nova, un agente de análisis de datos y web intelligence. Tu objetivo es scrapear sitios web y procesar la información de forma cuantitativa.</textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors" data-modal="modal-agent-3">Cancelar</button>
+          <button class="px-4 py-2 rounded-lg text-sm font-medium bg-brand-600 hover:bg-brand-500 text-white transition-colors" onclick="alert('Configuración guardada (simulado)')">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Agente 4: Sentinel -->
+  <div id="modal-agent-4" class="modal-overlay hidden fixed inset-0 z-40 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close-modal="modal-agent-4"></div>
+    <div class="relative z-50 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 max-w-lg w-full mx-4 border border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Configurar Prompt — Sentinel</h2>
+        <button class="close-modal p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-modal="modal-agent-4">✕</button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase">Prompt del sistema</label>
+          <textarea class="w-full h-48 p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">Eres Sentinel, un agente de seguridad, monitoreo y auditoría de documentos y calendarios organizacionales.</textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button class="close-modal px-4 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors" data-modal="modal-agent-4">Cancelar</button>
+          <button class="px-4 py-2 rounded-lg text-sm font-medium bg-brand-600 hover:bg-brand-500 text-white transition-colors" onclick="alert('Configuración guardada (simulado)')">Guardar</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -662,6 +911,33 @@
     });
 
     console.log('AgentHub Admin — Etapa 4: tabla usuarios + dropdowns + modales ✅');
+
+    // ─────────────────────────────────────────────
+    // PANEL DE SKILLS COLAPSABLE — transición suave
+    // ─────────────────────────────────────────────
+    document.addEventListener('click', e => {
+      const toggleBtn = e.target.closest('.toggle-skills-btn');
+      if (toggleBtn) {
+        const card = toggleBtn.closest('.bg-white, .bg-gray-800');
+        const panel = card.querySelector('.skills-panel');
+        const chevron = toggleBtn.querySelector('.chevron-icon');
+        const label = toggleBtn.querySelector('span');
+
+        const isCollapsed = panel.style.maxHeight === '' || panel.style.maxHeight === '0px';
+
+        if (isCollapsed) {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          chevron.classList.add('rotate-180');
+          label.textContent = 'Ocultar skills';
+        } else {
+          panel.style.maxHeight = '0px';
+          chevron.classList.remove('rotate-180');
+          label.textContent = 'Ver skills';
+        }
+      }
+    });
+
+    console.log('AgentHub Admin — Etapa 5: gestión de agentes + cards + skills colapsables + modales prompt ✅');
   </script>
 
 </body>
