@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgentHub — Panel de Administración</title>
 
-  <!-- Tailwind config: debe cargarse ANTES del CDN -->
+  <!-- Tailwind CSS CDN — debe cargarse ANTES de tailwind.config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config: se aplica DESPUÉS de que el CDN esté disponible -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -30,9 +33,6 @@
       }
     }
   </script>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <!--
